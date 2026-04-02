@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sklenářství Terezín</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin:0;
+    font-family:'Montserrat', sans-serif;
+    color:#333;
+}
+
+/* NAV */
+nav {
+    position: sticky;
+    top:0;
+    background:#0a3d62;
+    padding:15px;
+    text-align:center;
+    z-index:1000;
+}
+
+nav a {
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+}
+
+/* HERO */
+.hero {
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    color:white;
+    background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789');
+    background-size:cover;
+}
+
+.hero h1 {
+    font-size:50px;
+}
+
+.btn {
+    background:#00a8ff;
+    color:white;
+    padding:15px 30px;
+    border:none;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+/* SECTION */
+section {
+    padding:80px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* GRID */
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:25px;
+}
+
+.card {
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    border-radius:10px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.card:hover {
+    transform:translateY(-5px);
+}
+
+.card img {
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card div {
+    padding:20px;
+}
+
+/* CTA */
+.cta {
+    background:#0a3d62;
+    color:white;
+    text-align:center;
+}
+
+/* FORM */
+input, textarea {
+    width:100%;
+    padding:12px;
+    margin-bottom:10px;
+}
+
+footer {
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href=\"#sluzby\">Služby</a>
+<a href=\"#galerie\">Galerie</a>
+<a href=\"#kontakt\">Kontakt</a>
+</nav>
+
+<div class=\"hero\">
+<h1>Sklenářství Terezín</h1>
+<p>Rychlé a profesionální sklenářské služby</p>
+<button class=\"btn\" onclick=\"document.getElementById('kontakt').scrollIntoView()\">Poptávka zdarma</button>
+</div>
+
+<section id=\"sluzby\">
+<h2>Služby</h2>
+<div class=\"grid\">
+<div class=\"card\"><img src=\"https://images.unsplash.com/photo-1618220179428-22790b461013\"><div><h3>Řezání skla</h3></div></div>
+<div class=\"card\"><img src=\"https://images.unsplash.com/photo-1600585154340-be6161a56a0c\"><div><h3>Zasklívání</h3></div></div>
+<div class=\"card\"><img src=\"https://images.unsplash.com/photo-1620626011761-996317b8d101\"><div><h3>Sprchy</h3></div></div>
+</div>
+</section>
+
+<section class=\"cta\">
+<h2>Potřebujete sklenáře?</h2>
+<p>Ozvěte se nám ještě dnes</p>
+</section>
+
+<section id=\"kontakt\">
+<h2>Kontakt</h2>
+<form>
+<input placeholder=\"Jméno\">
+<input placeholder=\"Email\">
+<textarea placeholder=\"Popis zakázky\"></textarea>
+<button class=\"btn\">Odeslat</button>
+</form>
+</section>
+
+<footer>
+© 2026 Sklenářství Terezín
+</footer>
+
+</body>
+</html>
